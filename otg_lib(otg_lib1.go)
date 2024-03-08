@@ -1,0 +1,28 @@
+package otg_lib
+ 
+import "time"
+ 
+// TestParams struct to hold common test parameters
+type TestParams struct {
+    SourceIP      string
+    DestinationIP string
+    UDPDuration   time.Duration
+    TCPDuration   time.Duration
+    UDPPacketSize int
+    TCPPacketSize int
+    PacketInterval int
+}
+
+ 
+// DefaultTestParams function to return default test parameters
+func DefaultTestParams() TestParams {
+    return TestParams{
+        SourceIP: "10.133.35.158",
+        DestinationIP: "10.133.35.143",
+        UDPDuration:   10 * time.Second,
+        TCPDuration:   20 * time.Second,
+        UDPPacketSize:  64,
+        TCPPacketSize:  128,
+        PacketInterval: 100,
+    }
+}
