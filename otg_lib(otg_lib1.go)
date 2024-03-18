@@ -17,7 +17,7 @@ type TestParams struct {
 // DefaultTestParams function to return default test parameters
 func DefaultTestParams() TestParams {
     return TestParams{
-        SourceIP: "10.133.35.158",
+        SourceIP: "10.133.35.148",
         DestinationIP: "10.133.35.143",
         UDPDuration:   10 * time.Second,
         TCPDuration:   20 * time.Second,
