@@ -1,3 +1,5 @@
+# scp -r tcs@10.133.35.133:/home/tcs/149ondatra/sample/ondatra/otg/otg3/nping67_output.xlsx Desktop
+
 package otg3
  
 import (
