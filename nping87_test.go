@@ -51,14 +51,14 @@ time.Sleep(params.UDPDuration)
 executeAndLogNpingCommand("Sending TCP Traffic using Nping otg", fmt.Sprintf("sudo nping --tcp -c 10 --rate 10 %s %s", params.SourceIP, params.DestinationIP), sheet, outputStyle, passStyle, failStyle, t)
  
 // Save the Excel file
-filePath := "/home/tcs/sample/ondatra/otg/otg3/nping67_output.xlsx"
+filePath := "/home/tcs/149ondatra/sample/ondatra/otg/otg3/nping67_output.xlsx"
 if err := file.Save(filePath); err != nil {
 t.Fatalf("Error saving Excel file: %v", err)
 }
  
 // Print the paths at the end of the output
 t.Log("Nping traffic generation for UDP and TCP completed.\n")
-t.Logf("path for testcase : /home/tcs/sample/ondatra/otg/otg3/nping87_test.go")
+t.Logf("path for testcase : /home/tcs/149ondatra/sample/ondatra/otg/otg3/nping87_test.go")
 t.Logf("path for excel:%v",filePath)
 }
  
@@ -108,4 +108,3 @@ return string(output), err
 t.Logf("Nping output: %s", string(output))
 return string(output), nil
 }
-
